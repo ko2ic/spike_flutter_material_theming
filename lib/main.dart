@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:spike_flutter_material_theming/backdrop.dart';
 import 'package:spike_flutter_material_theming/buttons.dart';
 import 'package:spike_flutter_material_theming/forms.dart';
+import 'package:spike_flutter_material_theming/labels.dart';
 import 'package:spike_flutter_material_theming/lists.dart';
 import 'package:spike_flutter_material_theming/my_theme.dart';
 
@@ -101,6 +102,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ButtonsPage(),
           FormsPage(),
           ListsPage(),
+          LabelsPage(),
         ],
         onPageChanged: (index) {
           setState(() {
@@ -109,6 +111,7 @@ class _MyHomePageState extends State<MyHomePage> {
         },
       ),
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
         currentIndex: _page,
         items: [
           BottomNavigationBarItem(
@@ -122,6 +125,10 @@ class _MyHomePageState extends State<MyHomePage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.view_list),
             title: Text("リスト"),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.format_color_text),
+            title: Text("ラベル"),
           ),
         ],
         onTap: (index) {

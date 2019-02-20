@@ -113,8 +113,14 @@ class MyTheme {
     iconTheme: const IconThemeData.fallback().copyWith(
       color: _accent,
     ),
-//    IconThemeData primaryIconTheme,
-//    IconThemeData accentIconTheme,
+    primaryIconTheme: const IconThemeData.fallback().copyWith(
+      /// AppBarなどで利用しているアイコン
+      color: Colors.greenAccent,
+    ),
+    accentIconTheme: const IconThemeData.fallback().copyWith(
+      /// FloatingActionButtonのアイコン色
+      color: Colors.red,
+    ),
 //    SliderThemeData sliderTheme,
 //    TabBarTheme tabBarTheme,
 //    CardTheme cardTheme,
