@@ -21,11 +21,22 @@ class _ButtonsPageState extends State<ButtonsPage> {
           buildIconButton(),
           buildActionButton(),
           Padding(padding: EdgeInsets.only(top: 10, bottom: 10)),
+          buildActionButton2(),
+          Padding(padding: EdgeInsets.only(top: 10, bottom: 10)),
           buildCustomButton(),
           Padding(padding: EdgeInsets.only(top: 10, bottom: 10)),
           buildCustomButton2(),
           Padding(padding: EdgeInsets.only(top: 10, bottom: 10)),
           buildImageButton(),
+          Padding(padding: EdgeInsets.only(top: 10, bottom: 10)),
+          SizedBox(
+            width: 30,
+            height: 30,
+            child: CircularProgressIndicator(),
+          ),
+          Padding(padding: EdgeInsets.only(top: 20, bottom: 20)),
+          Icon(Icons.error),
+          Padding(padding: EdgeInsets.only(top: 20, bottom: 20)),
         ],
       ),
     ));
@@ -273,6 +284,20 @@ class _ButtonsPageState extends State<ButtonsPage> {
       alignment: const Alignment(0.0, -0.2),
       child: FloatingActionButton(
         child: const Icon(Icons.add),
+        onPressed: () {
+          // Perform some action
+        },
+        tooltip: 'floating action button',
+      ),
+    );
+  }
+
+  Widget buildActionButton2() {
+    return Align(
+      alignment: const Alignment(0.0, -0.2),
+      child: FloatingActionButton(
+        child: const Icon(Icons.add),
+        backgroundColor: Theme.of(context).primaryColor,
         onPressed: () {
           // Perform some action
         },

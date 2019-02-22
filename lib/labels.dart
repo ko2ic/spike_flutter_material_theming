@@ -7,8 +7,6 @@ class LabelsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final TextTheme textTheme = Theme.of(context).textTheme;
     final List<Widget> styleItems = <Widget>[
-      Padding(padding: EdgeInsets.only(top: 10, bottom: 10)),
-      Icon(Icons.error),
       TextStyleItem(name: 'Display 3', style: textTheme.display3, text: 'Regular 56sp'),
       TextStyleItem(name: 'Display 2', style: textTheme.display2, text: 'Regular 45sp'),
       TextStyleItem(name: 'Display 1', style: textTheme.display1, text: 'Regular 34sp'),
