@@ -57,8 +57,11 @@ class _MyHomePageState extends State<MyHomePage> {
             icon: Icon(Icons.add),
             onPressed: () {
               showDemoDialog<String>(
-                  context: context,
-                  child: AlertDialog(content: Text("aaaaaaaaa"), actions: <Widget>[
+                context: context,
+                child: AlertDialog(
+                  title: Text("title"),
+                  content: Text("aaaaaaaaa"),
+                  actions: <Widget>[
                     FlatButton(
                         child: const Text('CANCEL'),
                         onPressed: () {
@@ -77,7 +80,9 @@ class _MyHomePageState extends State<MyHomePage> {
                         Navigator.pop(context, "ok");
                       },
                     )
-                  ]));
+                  ],
+                ),
+              );
             }),
         actions: <Widget>[
           IconButton(

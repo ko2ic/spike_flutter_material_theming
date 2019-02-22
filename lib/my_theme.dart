@@ -88,7 +88,13 @@ class MyTheme {
 //        color: Colors.white,
 //      ),
 //    ),
-//    primaryTextTheme: commonTextTheme,
+
+    primaryTextTheme: const TextTheme().copyWith(
+      /// appBarのタイトルの色が変わる
+      title: TextStyle().copyWith(
+        color: Colors.teal,
+      ),
+    ),
 //    accentTextTheme: commonTextTheme,
     inputDecorationTheme: InputDecorationTheme(
       /// InputDecorationの枠線の色が変わる（これがなければ、lightやdartの枠線の色）。利用しているwidgetでUnderlineInputBorderを使っていても、ここで設定してものに変更される
@@ -151,7 +157,12 @@ class MyTheme {
 //      Color onError,
 //      brightness: Brightness.light,
     ),
-//    DialogTheme dialogTheme,
+    dialogTheme: DialogTheme(
+
+        /// dialogのタイトルを変える
+        titleTextStyle: TextStyle(
+      color: Colors.deepOrange,
+    )),
 //    Typography typography,
 //    CupertinoThemeData cupertinoOverrideTheme
   );
