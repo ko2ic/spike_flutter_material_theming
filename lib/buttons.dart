@@ -302,6 +302,7 @@ class _ButtonsPageState extends State<ButtonsPage> {
           // Perform some action
         },
         tooltip: 'floating action button',
+        heroTag: 'buildActionButton2',
       ),
     );
   }
