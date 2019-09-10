@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: MyTheme.data,
+      theme: MyTheme().data(),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
@@ -154,7 +154,16 @@ class _MyHomePageState extends State<MyHomePage> {
     ).then<void>((T value) {
       // The value passed to Navigator.pop() or null.
       if (value != null) {
-        _scaffoldKey.currentState.showSnackBar(SnackBar(content: Text('You selected: $value')));
+        _scaffoldKey.currentState.showSnackBar(
+          SnackBar(
+            content: Text('You selected: $value'),
+            action: SnackBarAction(
+                label: 'Action',
+                onPressed: () {
+                  print("action");
+                }),
+          ),
+        );
       }
     });
   }
